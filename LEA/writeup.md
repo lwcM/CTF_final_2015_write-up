@@ -49,8 +49,8 @@ server.mount_proc('/verify') do |req, res|
 end
 ```
 verify 的時候  
-1. 給 data 和 sig。
-2. HMAC(sha1, KEY, data) == sig 且 data 中有 flag 字眼，就可以拿到 flag。
+1. 給 data 和 sig。  
+2. HMAC(sha1, KEY, data) == sig 且 data 中有 flag 字眼，就可以拿到 flag。  
 
 ---
 
