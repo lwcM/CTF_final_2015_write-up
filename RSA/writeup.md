@@ -1,12 +1,12 @@
-# RSA (crypto 50) write up  @lwc
+# RSA (crypto 50) 
 ##### team : sblan
-##### solver：lwc (r04922161)
+##### participant：lwc (r04922161)
 ## Description
 ```
 Just RSA.
 https://www.dropbox.com/s/isnfvts5an2jwpu/rsa.zip?dl=0
 ```
-## Solution (sol.py)
+## Solution
 
 `c = 56267348817991667025293700596381772772705100752049364933949564121901533557055297556368355657861`  
 `e = 65537`  
