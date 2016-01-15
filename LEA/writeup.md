@@ -1,4 +1,4 @@
-# share (crypto 150)
+# LEA (crypto 200)
 ##### team : sblan
 ##### participant：lwc (r04922161)
 ## Description
@@ -59,8 +59,8 @@ verify 的時候
 2. 根據 sha1 演算法知道剛才得到的值其實是 sha1(data + padding(data))  
 3. 根據 sha1 演算法直接構造 sha1(data + padding(data) + str)，其中 str 包含 flag 字眼  
 4. HMAC(sha1, KEY, data) = sha1(KEY^opad | sha1(KEY^ipad | data))  
-   ipad = '\x36' * 64  
-   opad = '\x5c' * 64  
+     ipad = '\x36' * 64  
+     opad = '\x5c' * 64  
 5. 湊巧以前有 implement 過修改版的 sha1   
 https://github.com/lwcM/lwctools/blob/master/pysha1.py  
 可以指定 sha1 的 interal state 以及 padding 後面要填的 bytes 數量  
