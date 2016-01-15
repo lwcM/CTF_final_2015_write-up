@@ -61,11 +61,12 @@ verify 的時候
 4. HMAC(sha1, KEY, data) = sha1(KEY^opad | sha1(KEY^ipad | data))  
    ipad = '\x36' * 64  
    opad = '\x5c' * 64  
-
 5. 湊巧以前有 implement 過修改版的 sha1   
 https://github.com/lwcM/lwctools/blob/master/pysha1.py  
 可以指定 sha1 的 interal state 以及 padding 後面要填的 bytes 數量  
----
+
+---  
+
 依照以上思路開始攻擊，  
 由於 `fail if KEY.size < 30 || KEY.size > 50 `,  
 只要傳送 data = ipad + s 去 sign (+deprecated)，就可以得到 sha1(KEY^ipad | s)
