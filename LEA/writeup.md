@@ -24,7 +24,7 @@ end
 sign 的時候
 1. data 中不能有 flag
 2. request 中有 deprecated 輸出 sha1(strxor(KEY, data))
-3. request 中無 deprecated 輸出 HMAC(sha1, KEY, data)  
+3. request 中無 deprecated 輸出 HMAC(sha1, KEY, data)   
 ---
 verify 部分
 ```
@@ -48,15 +48,16 @@ end
 ```
 verify 的時候
 1. 給 data 和 sig。
-2. HMAC(sha1, KEY, data) == sig 且 data 中有 flag 字眼，就可以拿到 flag。
+2. HMAC(sha1, KEY, data) == sig 且 data 中有 flag 字眼，就可以拿到 flag。 
 ---
 可以做 Length Extension Attack，以下是初步想法
-1. 丟一段 data (+deprecated) 得到 sha1(data)
-2. 根據 sha1 演算法知道剛才得到的值其實是 sha1(data + padding(data))
-3. 根據 sha1 演算法直接構造 sha1(data + padding(data) + str)，其中 str 包含 flag 字眼
+1. 丟一段 data (+deprecated) 得到 sha1(data)  
+2. 根據 sha1 演算法知道剛才得到的值其實是 sha1(data + padding(data))  
+3. 根據 sha1 演算法直接構造 sha1(data + padding(data) + str)，其中 str 包含 flag 字眼  
 4. HMAC(sha1, KEY, data) = sha1(KEY^opad | sha1(KEY^ipad | data))  
    ipad = '\x36' * 64  
-   opad = '\x5c' * 64
+   opad = '\x5c' * 64  
+
 5. 湊巧以前有 implement 過修改版的 sha1   
 https://github.com/lwcM/lwctools/blob/master/pysha1.py  
 可以指定 sha1 的 interal state 以及 padding 後面要填的 bytes 數量  
