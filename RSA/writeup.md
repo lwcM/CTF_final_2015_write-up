@@ -1,6 +1,6 @@
-# RSA (crypto 50) 
+# RSA (crypto 50)
 ##### team : sblan
-##### participant：lwc (r04922161)
+##### participant : 廖唯辰 (r04922161)
 ## Description
 ```
 Just RSA.

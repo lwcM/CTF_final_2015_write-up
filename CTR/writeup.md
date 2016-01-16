@@ -1,6 +1,6 @@
 # CTR (crypto 100)
 ##### team : sblan
-##### participant：lwc (r04922161)
+##### participant : 廖唯辰 (r04922161)
 ## Description
 ```
 CTR mode has significant efficiency advantages over the standard encryption, but...

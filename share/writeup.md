@@ -1,6 +1,6 @@
 # share (crypto 150)
 ##### team : sblan
-##### participant：lwc (r04922161)
+##### participant : 廖唯辰 (r04922161)
 ## Description
 ```
 Generating primes are expensive, let's share its.

@@ -1,6 +1,6 @@
 # LEA (crypto 200)
 ##### team : sblan
-##### participant：lwc (r04922161)
+##### participant : 廖唯辰 (r04922161)
 ## Description
 ```
 Yes, "leave as final exam".
