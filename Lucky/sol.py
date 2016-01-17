@@ -5,7 +5,7 @@ context.log_level = 'error'
 
 r = []
 o = []
-process_num = 20
+process_num = 21
 
 def go(i):
 	r.append(remote('52.68.224.122', 9020))
@@ -17,7 +17,7 @@ def go(i):
 	o[i].send(s + '\n')
 
 
-ret = ['' for _ in xrange(20)]
+ret = ['' for _ in xrange(process_num)]
 for i in range(process_num):
 	go(i)
 
@@ -57,6 +57,3 @@ for i in range(0, process_num):
 		print r[i].recv()
 		print r[i].recv()
 		break
-
-
-
