@@ -1,10 +1,11 @@
-# OTP (crypto 300)
+# Lucky (crypto 300)
 ##### team : sblan
 ##### participant : 廖唯辰 (r04922161)
 ## Description
 ```
-One-time pad has perfect secrecy...?
-https://www.dropbox.com/s/314w5a5hntqhn8l/otp.zip?dl=0
+Let's play a game!
+nc 52.68.224.122 9020
+https://www.dropbox.com/s/c5vnss4iqlfphjl/lucky?dl=0
 ```
 ## Solution
 1. 反組 binary之後，發現程式第一部分(這裡稱為第一關)給定一個 8 bytes 字串的前 4 個 bytes，問若將這個字串作 sha1 之後前三個bytes 都是 0x00，那一開始的字串後 4 個 bytes 為何？這部份暴力求解即可。  
