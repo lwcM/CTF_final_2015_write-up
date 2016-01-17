@@ -1,0 +1,13 @@
+<?php
+    include 'flag.php'; 
+
+    // preparing 
+    foreach ($_REQUEST as $key => $value) {
+        $$key = $value;
+    }
+
+    if ( $_SERVER['REMOTE_ADDR'] == '127.0.0.1' ){
+        echo $flag;
+    } else {
+        echo 'there is no space like 127.0.0.1';
+    }
